@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Aspiradora",
+    "description": "Aspira todo tu piso",
+    "price": 100,
+    "thumbnail": "http://url.com",
+    "code": 12521,
+    "stock": 30
+  },
+  {
+    "id": 2,
+    "title": "Oso de peluche",
+    "description": "Color blanco",
+    "price": 20,
+    "thumbnail": "http://url.com",
+    "code": 33244,
+    "stock": 43
+  }
+]
