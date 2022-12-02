@@ -83,40 +83,4 @@ class ProductManager{
     }
 }
 
-async function run(){
-
-    const productosControlador = new ProductManager("explorer.json")
-    console.table(await productosControlador.getProducts())
-    
-    await productosControlador.addProduct("Aspiradora","Aspira todo tu piso",100,"http://url.com",12521,30)
-    await productosControlador.addProduct("Oso de peluche","Color blanco",20,"http://url.com",33244,43)
-    await productosControlador.addProduct("Lapicera Negra","Para escribir lo que quieras",2,"http://url.com",24432,100)
-   
-    console.table(await productosControlador.getProducts())
-    
-    //"Intentando ingresar sin el campo stock
-    await productosControlador.addProduct("Lapicera Negra","Para escribir lo que quieras",2,"http://url.com",24433)
-    
-    //Intentando ingrsar el mismo producto con el 'code' repetido
-    await productosControlador.addProduct("Lapicera Negra","Para escribir lo que quieras",2,"http://url.com",24432,100)
-    
-   // console.table(await productosControlador.getProducts())
-    
-    await productosControlador.updateProductById(3,"Lapicera AZUL","Para escribir lo que quieras",2,"http://url.com",24432,100); 
-    console.table(await productosControlador.getProductById(3)); 
-    
-    //Not found
-    console.table(await productosControlador.getProductById(4)); 
-    
-    console.table(await productosControlador.getProducts())
- 
-
-    await productosControlador.deleteProductById(3)
-    
-    console.table(await productosControlador.getProducts())
-
-    
-    console.table(await productosControlador.getProductById(3)); 
-}
-
-run()
+module.exports = ProductManager;
